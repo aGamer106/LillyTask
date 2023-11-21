@@ -1,9 +1,25 @@
 .spinner{
   font-size: 140px;
+  transition: all 5s ease-in-out;
 }
+
 .spinner:after {
   content: '◌';
+  /* added an inline-block display method to ensure the spinner is displayed correctly */
+  display: inline-block; 
+  animation: spin 2s linear infinite;
 }
+
+/* defining the spinning animation using the keyframe rule */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* the animation begins at 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /*the animation ends at 360 degrees*/
+  }
+}
+
 
 #chart {
     border: 1px solid black;
